@@ -9,15 +9,15 @@ RSpec.describe 'When I visit astronauts index page' do
     visit '/astronauts'
 
     within '.astronaut_1' do
-      expect(page). to have_content(astronaut_1.name)
-      expect(page). to have_content(astronaut_1.age)
-      expect(page). to have_content(astronaut_1.job)
+      expect(page).to have_content(astronaut_1.name)
+      expect(page).to have_content(astronaut_1.age)
+      expect(page).to have_content(astronaut_1.job)
     end
 
     within '.astronaut_2' do
-      expect(page). to have_content(astronaut_2.name)
-      expect(page). to have_content(astronaut_2.age)
-      expect(page). to have_content(astronaut_2.job)
+      expect(page).to have_content(astronaut_2.name)
+      expect(page).to have_content(astronaut_2.age)
+      expect(page).to have_content(astronaut_2.job)
     end
   end
 end

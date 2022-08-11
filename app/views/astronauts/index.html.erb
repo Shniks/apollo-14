@@ -2,9 +2,17 @@
 
 <% @astronaut.each do |astronaut| %>
   <Div class = 'astronaut_<%= astronaut.id %>'>
-    <l1>Name: <%= astronaut.name %></li><br>
+    <h3>Name: <%= astronaut.name %></li></h3>
     <l1>Age: <%= astronaut.age %></li><br>
-    <l1>Job: <%= astronaut.job %></li><br>
+    <l1>Job: <%= astronaut.job %></li><br><br>
+      <h4>List of Missions</h4>
+      <% j = 1 %>
+      <% astronaut.missions.alphabetical.each do |mission| %>
+        <Div class = "mission_<%= j %>">
+          <%= mission.title %>
+          <% j += 1 %>
+        </Div>
+      <% end %>
   </Div><br>
 <% end %>
 
