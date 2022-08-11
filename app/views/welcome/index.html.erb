@@ -1,2 +1,6 @@
-<h3><%= link_to 'Register as a User', '/users/new' %>
-<h3><%= link_to 'I already have an account', '/login' %>
+<% if current_user %>
+  <%= link_to "Log Out" %>
+<% else %>
+  <h3><%= link_to 'Register as a User', '/users/new' %>
+  <h3><%= link_to 'I already have an account', '/login' %>
+<% end %>
