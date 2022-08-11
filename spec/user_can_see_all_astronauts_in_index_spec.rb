@@ -7,7 +7,7 @@ RSpec.describe 'When I visit astronauts index page' do
     astronaut_2 = Astronaut.create!(name: 'Edwin Aldrin', age: 40, job: 'Pilot')
 
     visit '/astronauts'
-
+    save_and_open_page
     within '.astronaut_1' do
       expect(page). to have_content(astronaut_1.name)
       expect(page). to have_content(astronaut_1.age)
