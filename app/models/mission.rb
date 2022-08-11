@@ -5,6 +5,6 @@ class Mission < ApplicationRecord
 
   def self.alphabetical
     order(:title)
-  end 
+  end
 
 end
