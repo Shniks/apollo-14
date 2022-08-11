@@ -17,9 +17,12 @@ RSpec.describe 'When I hit the root path, I see a Register as a User link' do
       fill_in :password, with: password
 
       click_on 'Create User'
-      save_and_open_page
-      
+
       expect(page).to have_content("Welcome, #{username}!")
+
+      visit '/profile'
+
+      expect(page).to have_content("Hi, #{username}! This is your profile page.")
     end
   end
 end
