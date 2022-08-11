@@ -18,6 +18,7 @@ RSpec.describe 'When I visit the root path, I see a link to login' do
 
       expect(current_path).to eq('/')
       expect(page).to have_content("Welcome, #{username}!")
+      expect(page).to have_content("Log Out")
       expect(page).to_not have_content("Register as a User")
       expect(page).to_not have_content("I already have an account")
     end
