@@ -6,14 +6,14 @@ class UsersController < ApplicationController
 
   def create
     user = User.create!(user_params)
-    session[:id] = user.id
+    session[:user_id] = user.id
     flash[:success] = "Welcome, #{user.username}!"
 
     redirect_to '/'
   end
 
   def show
-    @user = User.find(session[:id])
+    # @user = User.find(session[:user_id]) # Have current_user now
   end
 
   private
