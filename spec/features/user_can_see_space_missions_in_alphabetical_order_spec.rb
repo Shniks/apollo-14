@@ -1,3 +1,5 @@
+require 'rails_helper'
+
 RSpec.describe 'When I visit astronauts index page' do
   it 'I can see a list of space missions in alphabetical order for each astronaut' do
 
